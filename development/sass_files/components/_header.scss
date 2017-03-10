@@ -1,0 +1,53 @@
+header{
+	position:relative;
+	@extend .clearfix;
+	@extend %no-select;
+	width: 100%;
+	min-width: 1280px;
+	height: 100px;
+	background-color: $Niagara;
+	box-shadow: 0 4px 3px $grey-light-2;
+	section.logo{
+		width:200px;
+		float: right;
+		img{
+			width: 80%;
+			height:auto;
+			margin: 10px 20px;
+		}
+	}
+	nav.navigation-bar {
+		width:(1280-200)+px;
+		float: right;
+		ul{
+			padding: 0;
+			margin: 0;
+			width:1040px;
+			margin-right: 40px;
+			position: absolute;
+			bottom:0px;
+			@extend .clearfix;
+			li{
+				display: block;
+				float: right;
+				a{
+					padding: 14px 20px;
+					display: block;
+					width: 100%;
+					font-size: 1rem;
+					font-weight: bold;
+				}
+				&.active{
+					background-color: rgba(white,.06)!important;
+					box-shadow:inset 0 -4px 0 rgba(white,.9);
+				}
+				&:hover{
+					background-color: rgba(white,.05);
+				}
+				&.float-left{
+					float: left;
+				}
+			}
+		}
+	}
+}

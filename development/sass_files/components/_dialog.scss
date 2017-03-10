@@ -1,0 +1,202 @@
+.dialog-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-width: 1280px;
+    height: 100%;
+    background-color: rgba(black, .2);
+    display: none;
+    @extend .clearfix;
+    @extend %no-select;
+    .dialog {
+        cursor: default;
+        position: relative;
+        // float: right;
+        width: 450px;
+        height: 330px;
+        background-color: white;
+        margin: 0 auto;
+        display: block;
+        margin-top: 130px;
+        padding: 20px 25px;
+        padding-bottom: 50px;
+        box-shadow: 1px 4px 15px lighten($grey-light-1, 2);
+        color: $grey-dark-2;
+        .headline {
+            font-size: 1.1rem;
+            color: $grey-light-1;
+            text-align: center;
+            margin: .4rem 0 .8rem 0;
+        }
+        .reservation-table {
+            border-collapse: collapse;
+            width: 100%;
+            tr {
+                margin-bottom: .5rem;
+                td {
+                    padding: 10px 0;
+                    text-align: center;
+                    &:first-of-type {
+                        width: 15%;
+                        i {
+                            background-color: $grey-light-4;
+                            padding: .4rem;
+                            font-size: 1.2rem;
+                            width: 2rem;
+                            height: 2rem;
+                            border-radius: 100%;
+                            color: lighten($grey, 7);
+                        }
+                    }
+                    &:last-of-type {
+                        font-size: 1.15rem;
+                        color: lighten($grey-dark-1, 15);
+                        font-weight: bold;
+                        &.cost::after {
+                            content: 'ریال';
+                            font-weight: normal;
+                            font-size: .95rem;
+                            margin-right: .5rem;
+                            color: $grey;
+                        }
+                        &.count {
+                            input[type="text"] {
+                                max-width: 4rem;
+                                min-width: 2rem;
+                                text-align: center;
+                                color: $Niagara;
+                                font-weight: bold;
+                                font-weight: 1.4rem;
+                            }
+                            &::after {
+                                content: 'عدد';
+                                font-weight: normal;
+                                font-size: .95rem;
+                                margin-right: .5rem;
+                                color: $grey;
+                            }
+                        }
+                        >select {
+                            display: none;
+                            visibility: hidden;
+                            width: 0;
+                            height: 0;
+                            opacity: 0;
+                        }
+                        .select-input {
+                            span {
+                            	min-width: 150px;
+                                position: relative;
+                                font-weight: normal;
+                                display: inline-block;
+                                >.selected-item-name {
+                                    padding: .5rem 1rem;
+                                    cursor: pointer !important;
+                                    @extend .input-field;
+                                    &:active {
+                                        box-shadow: 0 2px 2px $grey-light-2;
+                                    }
+                                    label {
+                                        cursor: pointer !important;
+                                        font-weight: bold;
+                                        color:$grey;
+                                    }
+                                    >i {
+                                        font-size: 1.3rem;
+                                        margin-right: .5rem;
+                                    }
+                                }
+                                >.select-items {
+                                    display: none;
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    padding: .5rem -0px;
+                                    @extend .input-field;
+                                    background-color: white;
+                                    box-shadow: 0 2px 2px $grey-light-2;
+                                    z-index: 999;
+                                    ul {
+                                        li {
+                                            padding: .4rem .5rem;
+                                            font-size: 1rem;
+                                            font-weight: bold;
+                                            color: $grey;
+                                            @extend %ellipse;
+                                            &.default {
+                                                font-weight: normal;
+                                                color: $grey-light-2;
+                                                font-size: .95rem;
+                                                padding: .7rem 0;
+                                                border-bottom: 1px solid $grey-light-4;
+                                                // margin-bottom: .3rem;
+                                            }
+                                            &:not(.default) {
+                                                &:hover {
+                                                    background-color: rgba($Niagara, .05);
+                                                    color: $grey;
+                                                    text-shadow: 1px 1px 2px $grey-light-4;
+                                                    cursor: pointer;
+                                                }
+                                                &:active{
+                                                	background-color: rgba($Niagara, .07);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .buttons {
+            display: block;
+            width: 100%;
+            @extend .clearfix;
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            padding: 15px 20px;
+            .btn {
+                float: left;
+                box-shadow: none;
+                padding: 5px 12px;
+                font-size: .8rem;
+                font-weight: bold;
+                background-color: $grey-light-3;
+                border: 1px dashed darken($grey-light-3, 3);
+                &:first-of-type {
+                    border-radius: .5rem 0 0 .5rem;
+                    color: $confirm;
+                    border-right-width: 0;
+                    &:hover {
+                        background-color: $confirm;
+                        color: white;
+                        border-color: darken($confirm, 3);
+                    }
+                }
+                &:last-of-type {
+                    border-radius: 0 .5rem .5rem 0;
+                    color: $cancel;
+                    border-left-width: 0;
+                    &:hover {
+                        background-color: $cancel;
+                        color: white;
+                        border-color: darken($cancel, 3);
+                    }
+                }
+                i {
+                    font-weight: bold;
+                }
+                &:active {
+                    transform: none;
+                }
+            }
+        }
+    }
+}

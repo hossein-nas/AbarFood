@@ -1,0 +1,12 @@
+@font-face {
+	font-family:'IRANSans-web';
+	src:url("/fonts/IRANSans/WebFonts/eot/IRANSansWeb_Bold.eot");
+	src:url("/fonts/IRANSans/WebFonts/eot/IRANSansWeb_Medium.eot?#iefix") format("eot"),url("/fonts/IRANSans/WebFonts/woff2/IRANSansWeb_Medium.woff2") format("woff2"),url("/fonts/IRANSans/WebFonts/woff/IRANSansWeb_Medium.woff") format("woff"),url("/fonts/IRANSans/WebFonts/ttf/IRANSansWeb_Medium.ttf") format("ttf");
+	font-weight:bold
+}
+@font-face {
+	font-family:'IRANSans-web';
+	src:url("/fonts/IRANSans/WebFonts/eot/IRANSansWeb_Light.eot");
+	src:url("/fonts/IRANSans/WebFonts/eot/IRANSansWeb_Light.eot?#iefix") format("eot"),url("/fonts/IRANSans/WebFonts/woff2/IRANSansWeb_Light.woff2") format("woff2"),url("/fonts/IRANSans/WebFonts/woff/IRANSansWeb_Light.woff") format("woff"),url("/fonts/IRANSans/WebFonts/ttf/IRANSansWeb_Light.ttf") format("ttf");
+	font-weight:normal
+}

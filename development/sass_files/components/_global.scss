@@ -1,0 +1,69 @@
+html {
+ box-sizing: border-box;
+ direction: rtl;
+}
+*, *:before, *:after {
+ box-sizing: inherit;
+  font-family: "Iran Sans", tahoma, arial;
+
+}
+
+body{
+	font-size: 18px;
+}
+.container {
+	margin: 0 auto;
+	width: $container-width;
+}
+.clearfix{
+	&::after{
+		clear:both;
+		display: table;
+		content:'';
+	}
+}
+
+ul, menu, dir,p {
+		display: block;
+		list-style-type: none;
+		-webkit-margin-before: 0;
+		-webkit-margin-after: 0;
+		-webkit-margin-start: 0;
+		-webkit-margin-end: 0;
+		-webkit-padding-start: 0;
+}
+ 
+
+a{
+	outline:none;
+	display: inline-block;
+	color: $WhiteSmoke;
+	text-decoration: none;
+}
+
+%no-select {
+	user-select: none;
+}
+
+%ellipse{
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap;
+	display: block;
+	padding: 0 .5rem;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	line-height: 1.1;
+}
+
+// Header Styles
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5) 0;}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 2) 0 ($h2-fontsize / 2.5) 0;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5) 0;}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0;}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}

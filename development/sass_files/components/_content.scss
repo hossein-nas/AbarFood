@@ -1,0 +1,245 @@
+#content {
+	@extend .clearfix;
+	.sidebar {
+		height: 100%;
+		@extend %no-select;
+		text-align: center;
+		width: 275px;
+		background-color: $grey-light-5;
+		box-shadow: inset 1px 0 0 $grey-light-3;
+		float: right;
+		padding: 35px;
+		.thumbnail {
+			width: 150px;
+			height: 150px;
+			background-color: $grey-light-4;
+			border-radius: 100%;
+			overflow: hidden;
+			margin: 0 auto;
+			box-shadow: 0 3px 3px $grey-light-3;
+			margin-bottom: 1.5rem;
+		}
+		.specification-table {
+			width: 100%;
+			display: block;
+			tbody {
+				display: block;
+			}
+			tr {
+				text-align: center;
+				margin-bottom: 20px;
+				display: block;
+				width: 100%;
+				td {
+					display: block;
+					&:first-of-type {
+						font-size: .85rem;
+						color: $grey-light-1;
+						padding: 3px 0;
+					}
+					&:last-of-type {
+						font-size: 1.1em;
+						font-weight: bold;
+						color: $grey-dark-1;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						white-space: nowrap;
+					}
+				}
+			}
+		}
+		.increase-balance {
+			opacity: .25;
+			border: none;
+			background-color: $Niagara;
+			margin-top: -25px;
+			color: white;
+			transition: all .3s;
+			&:hover {
+				transition: all .3s;
+				opacity: .7;
+			}
+			&:active {
+				background-color: lighten($Niagara, 4);
+				transition: all 0s;
+			}
+		}
+	}
+	.body {
+		width: 1005px;
+		float: right;
+		padding: 20px 30px;
+		padding-bottom: 100px;
+		span.headline {
+			text-align: center;
+			display: block;
+			color: $grey-light-1;
+			font-size: .95rem;
+			padding: 20px 0;
+		}
+		.food-table {
+			@extend %no-select;
+			.row {
+				margin-bottom: 5px;
+				@extend .clearfix;
+				text-align: center;
+				>section.cell {
+					@extend .clearfix;
+					cursor: pointer;
+					overflow: hidden;
+					margin-left: 5px;
+					float: right;
+					background-color: $grey-light-5;
+					width: 265px;
+					height: 60px;
+					position: relative;
+					&:first-of-type {
+						width: 125px;
+						background-color: $grey-light-4!important;
+					}
+					&.weakday {
+						cursor: default;
+						padding: 8px;
+						padding-left: 15px;
+						p {
+							font-weight: bold;
+							font-size: 1.2rem;
+							color: $grey;
+						}
+						span {
+							font-size: .9rem;
+							color: $grey-light-1;
+						}
+					}
+					&.reserved::after {
+						content: 'رزرو شد';
+						background-color: $Crusta;
+						padding: 1px 5px 3px 5px;
+						font-size: .75rem;
+						color: white;
+						bottom: 0;
+						left: 0;
+						position: absolute;
+						border-radius: 0 .3rem 0 0;
+						opacity: .7;
+					}
+					&:hover {
+						background-color: darken($grey-light-5, 2);
+					}
+					.food-name {
+						font-size: 1.15rem;
+						color: $grey;
+						margin: .6rem 0 .2rem 0;
+						letter-spacing: -.03rem;
+						@extend %ellipse;
+					}
+					.not-reserved {
+						font-size: .75rem;
+						color: $grey-light-1;
+					}
+					.details {
+						font-size: .75rem;
+						color:$grey-light-1;
+						display: block;
+						width:215px;
+						padding: .6rem .4rem .2rem .4rem;
+						text-align: right;
+						direction: rtl;
+						>.count{
+							font-weight: bold;
+							&::before{
+								font-size: .75rem;
+								font-weight: normal;
+								content:'تعداد : ';
+							}
+							&::after{
+								font-size: .75rem;
+								font-weight: normal;
+								content:' عدد';
+							}
+							margin-left: .5rem;
+						}
+						>.self{
+							font-weight: bold;
+							&::before{
+								font-size: .75rem;
+								font-weight: normal;
+								content:'سلف : ';
+							}
+							margin-right: .5rem;
+						}
+					}
+				}
+				&:first-of-type {
+					>section.cell {
+						height: 40px;
+						padding: 10px;
+						cursor: default;
+						&:first-of-type {
+							opacity: 0;
+						}
+						&:nth-of-type(2) {
+							background-color: rgba($Niagara, .1)!important;
+							color: rgba($Niagara, .40);
+						}
+						&:nth-of-type(3) {
+							background-color: rgba($Confetti, .1)!important;
+							color: rgba($Confetti, .55);
+						}
+						&:nth-of-type(4) {
+							background-color: rgba($BlueHood, .08)!important;
+							color: rgba($BlueHood, .45);
+						}
+					}
+				}
+				&.active {
+					.cell.weakday {
+						&::after {
+							content: 'امروز';
+							background-color: $OceanGreen;
+							padding: 25px 15px 2px 15px;
+							font-size: .65rem;
+							color: white;
+							top: -1.2rem;
+							left: -1.3rem;
+							box-shadow: 0 2px 3px $grey-light-2;
+							position: absolute;
+							transform: rotate(-38deg);
+							opacity: .6;
+						}
+					}
+				}
+			}
+		}
+		.weak-change {
+			padding: 20px;
+			text-align: center;
+			.weakprev,
+			.weaknext {
+				color: $grey-light-1;
+				&:hover {
+					border-bottom: 1px dashed $grey-light-2;
+					padding-bottom: 5px;
+				}
+			}
+			.thisweak {
+				padding: 10px 40px;
+				background-color: $grey-light-3;
+				color: $grey;
+				display: inline-block;
+				border-radius: .5rem;
+				margin: 0 10px;
+				&:hover {
+					box-shadow: 0 3px 2px $grey-light-2;
+				}
+				&:active {
+					transform: translate(0, 2px);
+					box-shadow: 0 1px 2px $grey-light-2;
+				}
+			}
+		}
+		.buttons {
+			text-align: center;
+		}
+	}
+}

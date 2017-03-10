@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>سامانه تغذیه ابر فود:: رزرو غذا</title>
+    <link rel="stylesheet" href="./css_files/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <section class="logo">
+                <img src="./image_files/AbarLogo_w.svg" alt="لوگوی ابرفود">
+            </section>
+            <nav class="navigation-bar">
+                <ul>
+                    <li class="active"><a href="#">رزرو غذا</a></li>
+                    <li><a href="#">افزایش موجودی</a></li>
+                    <li><a href="#">گــزارشات</a></li>
+                    <li><a href="#">تغییر مشخصات کاربری</a></li>
+                    <li class="float-left"><a href="#">خروج</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section class="status-bar">
+            <div class="notification">
+            </div>
+            <div class="date">
+            </div>
+        </section>
+        <section id="content">
+            <article class="sidebar">
+                <div class="thumbnail">
+                    <img src="" alt="">
+                </div>
+                <table class="specification-table">
+                    <tr>
+                        <td>نام و نام خانوادگی :</td>
+                        <td>حسین نصیری صوری</td>
+                    </tr>
+                    <tr>
+                        <td>شماره کارت :</td>
+                        <td>۹۳۶۱۱۲۰۱۰۱</td>
+                    </tr>
+                    <tr class="balance">
+                        <td>موجودی فعلی :</td>
+                        <td>۱۰۲۷۵۰</td>
+                    </tr>
+                </table>
+                <a href="#" class="btn small increase-balance">افزایش موجودی</a>
+            </article>
+            <article class="body">
+                <span class="headline">
+                    <i class="material-icons ">more_horiz</i>
+                    برای رزرو غذا روی خانه مورد نظر دوبار کلیک کنید!
+                    <i class="material-icons ">more_horiz</i>
+                </span>
+                <div class="food-table">
+                    <div class="row title">
+                        <section class="cell"></section>
+                        <section class="cell">صبحانه</section>
+                        <section class="cell">ناهار</section>
+                        <section class="cell">شام</section>
+                    </div>
+                    <div class="row">
+                        <section class="cell weakday">
+                            <p>شـنبه</p>
+                            <span>۹۵/۱۲/۷</span>
+                        </section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                    </div>
+                    <div class="row">
+                        <section class="cell weakday">
+                            <p>۱ شـنبه</p>
+                            <span>۹۵/۱۲/۷</span>
+                        </section>
+                        <section class="cell">
+                            <h3 class="food-name">زرشک پلو با مرغ</h3>
+                            <span class="not-reserved">رزرو نشده</span>
+                        </section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                    </div>
+                    <div class="row">
+                        <section class="cell weakday">
+                            <p>۲ شـنبه</p>
+                            <span>۹۵/۱۲/۷</span>
+                        </section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                    </div>
+                    <div class="row active">
+                        <section class="cell weakday">
+                            <p>۳ شـنبه</p>
+                            <span>۹۵/۱۲/۷</span>
+                        </section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                    </div>
+                    <div class="row">
+                        <section class="cell weakday">
+                            <p>۴ شـنبه</p>
+                            <span>۹۵/۱۲/۷</span>
+                        </section>
+                        <section class="cell reserved">
+                            <h3 class="food-name">زرشک پلو با مرغ</h3>
+                            <span class="details">
+                                <span class="count">۱</span>|
+                            <span class="self">مرکزی</span>
+                            </span>
+                        </section>
+                        <section class="cell"></section>
+                        <section class="cell">
+                        </section>
+                    </div>
+                    <div class="row">
+                        <section class="cell weakday">
+                            <p>۵ شـنبه</p>
+                            <span>۹۵/۱۲/۷</span>
+                        </section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                    </div>
+                    <div class="row">
+                        <section class="cell weakday">
+                            <p>جمـعه</p>
+                            <span>۹۵/۱۲/۷</span>
+                        </section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                        <section class="cell"></section>
+                    </div>
+                    <div class="weak-change">
+                        <a href="#prev_weak" class=" weakprev">
+                            <i class="material-icons">chevron_right</i> هفته قبل
+                        </a>
+                        <a href="#" class="thisweak">هفته جاری</a>
+                        <a href="#next_weak" class=" weaknext">
+                        هفته بعد
+                        <i class="material-icons">chevron_left</i>
+                        </a>
+                    </div>
+                    <div class="buttons">
+                        <button type="button" class="btn bold success submit large">ثبت تغییرات</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <div class="dialog-box">
+        <div class="dialog">
+            <h3 class="headline">عملیات رزرو غذا</h3>
+            <table class="reservation-table">
+                <tbody>
+                    <tr>
+                        <td><i class="material-icons">restaurant</i></td>
+                        <td>
+                            <select name="food_selection" id="food_selection">
+                                <option value="1">رزشک پلو</option>
+                                <option value="2">کشمش پلو</option>
+                                <option selected value="0">غذا را انتخاب کنید</option>
+                            </select>
+                            <div class="select-input">
+                                <span>
+                                    <section class='selected-item-name'>
+                                        <label for="food-name" data-key="0">غذا را انتخاب کنید...</label>
+                                        <i class="material-icons">keyboard_arrow_down</i>
+                                    </section>
+                                    <div class="select-items">
+                                        <ul>
+                                            <li class="default" data-value="">غذا را انتخاب کنید</li>
+                                            <li data-value="">کشمش پلو</li>
+                                            <li data-value="">زرشک پلو</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="material-icons">local_atm</i></td>
+                        <td class="cost">۱۲۰۰۰ </td>
+                    </tr>
+                    <tr>
+                        <td><i class="material-icons">place</i></td>
+                        <td>سلف مرکزی</td>
+                    </tr>
+                    <tr>
+                        <td><i class="material-icons">plus_one</i></td>
+                        <td class="count">
+                            <input type="text" class="count input-field" value="1"> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="buttons">
+                <div class="btn confirm">تأیید
+                    <i class="material-icons">done</i>
+                </div>
+                <div class="btn cancel">انصراف
+                    <i class="material-icons">window_close</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Scirpt Start-->
+    <script src="js_files/scripts.js"></script>
+    <script>
+    </script>
+    <!--Scripts End-->
+</body>
+
+</html>

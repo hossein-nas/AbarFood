@@ -1,0 +1,33 @@
+@font-face {
+	font-family: "Iran Sans";
+	src:url("#{$iran-sans-font-path}IRANSansWeb_Bold.eot");
+	src:url("#{$iran-sans-font-path}IRANSansWeb_Medium.eot?#iefix") format("embedded-opentype"),
+	url("#{$iran-sans-font-path}IRANSansWeb_Medium.woff2") format("woff2"),
+	url("#{$iran-sans-font-path}IRANSansWeb_Medium.woff") format("woff"),
+	url("#{$iran-sans-font-path}IRANSansWeb_Medium.ttf") format("truetype");
+	font-weight: bold
+}
+
+@font-face {
+	font-family: "Iran Sans";
+	src:url("#{$iran-sans-font-path}IRANSansWeb_Light.eot");
+	src:url("#{$iran-sans-font-path}IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"),
+	url("#{$iran-sans-font-path}IRANSansWeb_Light.woff2") format("woff2"),
+	url("#{$iran-sans-font-path}IRANSansWeb_Light.woff") format("woff"),
+	url("#{$iran-sans-font-path}IRANSansWeb_Light.ttf") format("truetype");
+	font-weight: normal
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Material Icons'),
+	local('MaterialIcons-Regular'),
+	url('#{$material-icon-path}material_icon.woff2') format('woff2');
+	src: url('#{$material-icon-path}material_icon.eot');
+	src: url('#{$material-icon-path}material_icon.eot?#iefix') format("embedded-opentype"),
+	url('#{$material-icon-path}material_icon.woff2') format("woff2"),
+	url('#{$material-icon-path}material_icon.woff') format("woff"),
+	url('#{$material-icon-path}material_icon.ttf') format("truetype");
+}
