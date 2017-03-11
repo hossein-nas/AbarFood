@@ -1,0 +1,61 @@
+.signin-box {
+	width: 350px;
+	margin: 0 auto;
+	margin-top: 7.5rem;
+	background-color: $Niagara;;
+	box-shadow: 0px 5px 15px $grey-light-2;
+	padding:2rem 1.5rem;
+	.signin-input{
+		font-size: 1.3rem;
+		outline: none;
+		overflow: hidden;
+		padding: 0;
+		margin: 0;
+		color: $grey-dark-2;
+		border:none;
+		display: block;
+		padding: 1rem 1rem;
+		width: 100%;
+		text-align: center;
+		direction: ltr;
+		&:focus{
+			box-shadow: 0 3px 10px rgba(black,.15);
+		}
+	}
+
+	.sending{
+		display: block;
+		margin-top: 1.5rem;
+		@extend .clearfix;
+		text-align: left;
+		a{
+			text-align: left;
+			font-size: .95rem;
+			margin-bottom: .5rem;
+			display: inline-block;
+			border-bottom: 1px dashed transparent;
+			padding: .3rem -0px;
+			&:hover{
+				border-bottom: 1px dashed rgba(white,.5);
+			}
+		}
+		.submit-btn{
+			@extend %btn-clear;
+			float: left;
+			display: block;
+			padding: .7rem 3.4rem;
+			background-color: $Pink;
+			color:white;
+			font-size: 1rem;
+			text-shadow:1px 1px 2px $grey-light-1;
+			&:hover{
+				opacity: .97;
+			}
+			&:active{
+				background-color: darken($Pink,5);
+				text-shadow:1px 1px 2px $grey;
+			}
+		}
+	}
+}
+
